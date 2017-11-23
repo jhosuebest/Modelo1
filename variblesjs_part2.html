@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<style>
+		.thumb{
+			width:100px;
+			transition:1000ms all ease;
+		}
+
+		.grande{
+			width:250px;
+		}  
+	</style>
+</head>
+<body> 
+	 <form action="">
+	 	<input type="button" name="" value="Zoom" onclick="zoom();">
+	 </form>
+	 <img id="thumb" class="thumb" src="img/girl.jpg" >
+
+	 <script>
+	 	 
+          var zoom = function(){
+             
+             	var thumb = document.getElementById("thumb");
+             	if(thumb.className == "thumb"){
+             		thumb.setAttribute("class", "thumb grande");
+             	}
+             	else{
+             		thumb.className="thumb";
+             	}
+             
+
+          }
+	 </script>
+    
+
+
+
+
+
+
+  <!--<style>
+		.titulo{
+			border:1px solid navy;
+			background:#ccc;
+			padding:10px;
+		}
+
+		.tituloGrande{
+			font-size:60px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="encabezado" class="titulo tituloGrande">I'm an header \*_*/</h1>
+
+	<script>
+		// Modificando el estilo de los elementos
+
+		var encabezado = document.getElementById("encabezado");
+		
+		//modificando el estilo primera forma ss
+		encabezado.className= encabezado.className.replace("tituloGrande","");
+        // modificando segunda forma
+        // encabezado.className ="";
+
+            // cambiando estilos de otra manera
+		// encabezado.style.color="green";
+		// encabezado.style.backgroundColor="yellow";
+		// encabezado.style.fontFamily="Tahoma"
+	</script> -->
+
+
+
+
+
+
+
+
+<!--	
+	<style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+		div{
+			width:200px;
+			height:200px;
+			background:#A6E98B;
+			display:inline-block;
+			margin:10px 10px;
+			border:1px solid #8C8FA9;
+		}
+
+		.azul{
+			background:#0B29E2;
+			border:1px solid #000;
+		}
+
+		.rojo{
+			background:#F40C22;
+			border:1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<section id="contenedor">
+		<div class=""></div>
+	    <div class=""></div>
+	</section>
+
+	<script>
+		// Acceso a los atributos DOM
+
+		var elemento = document.createElement("div"),
+		    padre= document.getElementById("contenedor"),
+            referencia= document.getElementsByTagName("div")[0];
+		
+		padre.insertBefore(elemento, referencia);
+		elemento.setAttribute("class", "azul");
+
+	</script> -->
+
+
+
+
+
+
+
+
+<!-- <ol id="lista">
+	     <li id=first_e>Today was a tired day</li>
+	     <li>Learning to programming</li>
+	</ol>
+       
+       <script> 
+       		// Modificando el DOM (innerHTML and textContent)
+
+       		//var first_e= document.getElementById("first_e");
+       		//first_e.innerHTML= "Today was not a <i><b>good</b></i> day for <i>Josue</i>"; // I can use (textContent -> This method doesn't accept tags like it is) and (innerHTML -> this method accepts tags) 
+
+       		// Reemplazando el DOM (replaceChild)
+       		 // var elemento=document.createElement("li"),
+       		   //   contenido= document.createTextNode("Have a good first day!");
+       		     // elemento.appendChild(contenido);
+       		  //var padre= document.getElementsByTagName("li")[0].parentNode,
+       		    //  referencia = document.getElementsByTagName("li")[1];
+       		      //padre.replaceChild(elemento, referencia);
+            
+            // Eliminando el DOM (removeChild)
+
+             var padre = document.getElementsByTagName("li")[0].parentNode,
+                 hijo = document.getElementsByTagName("li")[0];
+
+                 padre.removeChild(hijo);
+        </script> -->
+ 
+
+
+
+
+ <!--	<script>
+		// Agregandos nodos al DOM
+
+		var elemento= document.createElement("li"),
+		    contenido=document.createTextNode("One more list");
+
+		elemento.appendChild(contenido);
+
+		var padre=document.getElementsByTagName("li")[0].parentNode,
+		    primerelemento=document.getElementsByTagName("li")[0];
+
+		padre.insertBefore(elemento, primerelemento); // insertBefore(primero el elemento, luego nodo de referencia)
+	</script>  -->
+
+
+
+
+	<!--
+	<h1 id="titulo">Title about our Website</h1>
+	<div id="subtitulo"></div>
+	<p>1.- Lorem ipsum <b>dolor</b> sit amet, consectetur adipisicing elit. suscipit maxime harum vitae, minus a beatae mollitia alias! Quo sint nemo neque </p>
+	<p id="segundo">2.- Lorem ipsum dolor sit amet, consectetur adipisicing elit. suscipit maxime harum vitae, minus a beatae mollitia alias! Quo sint nemo neque </p>
+	<p>3.- Lorem ipsum dolor sit amet, consectetur adipisicing elit. suscipit maxime harum vitae, minus a beatae mollitia alias! Quo sint nemo neque </p>
+
+	<script>
+		var elementosp = document.getElementsByTagName("p"); // buscamos los parrafos desde el la herramienta para desarrollados colocando ahi (elementosp[0].innerHTML) O (CAMBIAR  de manera temporal o buscar a partir de su id segundop.innerHTML )
+		var segundop = document.getElementById("segundo");
+
+		//creando nodos del DOM
+		// 1.- Crear el elemnto
+		var elemento = document.createElement("h2");
+		//2.- Creando un nodo de texto
+		var contenido = document.createTextNode("This is our titular");
+		//3.-Añadir el nodo de texto al elemento
+		elemento.appendChild(contenido);
+		//4.- Agregar atributos al elemnto
+         elemento.setAttribute("align", "center"); 
+		//5.- Agregar el elemento al documento
+		document.getElementById("subtitulo").appendChild(elemento); // tambien podriamos colocar document.body.appendChild(elemento) para que se ubique al final de nuestro contenido
+	</script> -->
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
